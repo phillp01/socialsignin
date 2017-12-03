@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal RSA Feed</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" href="rsaFeedCss.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700,900" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+	<script src="rssJS.js"></script>
+	<script src="rss2.js"></script>
+	
+</head>
+<body>
+	<aside id="sidebar">
+		<header>
+			<h1>Content Generator</h1>			
+		</header>
+
+		<div id="filter">
+				<input id="filter" type="sectionarch" placeholder="Filter your feeds..." /><i class="fa fa-search" aria-hidden="true"></i>
+		</div>
+
+		<div id="subscribed_feeds">
+			<!-- <div class="feed"><i class="fa fa-circle-o" aria-hidden="true"></i><h3 class="feedName">Feed Name</h3><i class="fa fa-times-circle" aria-hidden="true"></i></div> -->
+		</div>
+
+		<div class="divider"></div>
+
+		<div id="add_new">
+
+			<h3>Add a new feed</h3>
+			
+
+				<input id="feedName" type="text" name="feed_name" placeholder="Type your feed name...">
+				<input id="feedURL" type="text" placeholder="Copy your RSS url...">
+				<input id="submit" type="submit" name="add_feed" value="Add Feed">
+
+
+		</div>
+	</aside>
+
+
+	<main id="main">
+		<section id="grid" class="grid">
+<!-- 			<article class="grid-item">
+				<header class="article_header">
+					<h4>
+						Title
+					</h4>
+					<time>
+						Date | Time
+					</time>
+				</header>
+				<figure>
+					<img src="http://fillmurray.com/360/180" alt="Fill Murray">
+				</figure>
+				<div class="article_content">
+					<header>
+						Article Header
+					</header>
+					<div class="article_snippet">
+						Snippet Snippet Snippet Snippet Snippet Snippet Snippet
+					</div>
+				</div>
+			</article> -->
+		</section>
+	</main>
+
+
+<script>
+
+// populateGrid();
+
+document.getElementById("subscribed_feeds").innerHTML = populateFeedList2();
+
+$('#submit').click(function() {
+     var feedName = ($("#feedName").val());
+     var feedURL = ($("#feedURL").val());
+     addFeed2(feedName, feedURL);
+     // storeRssFeeds();
+    });
+
+</script>
+
+
+</body>
+
+<script src="https://use.fontawesome.com/2c445eff8c.js"></script>
+</html>

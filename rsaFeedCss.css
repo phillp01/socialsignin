@@ -1,0 +1,218 @@
+html	{
+	height:100%;
+}
+
+body		{
+	font-size:18px;
+	font-family:'Lato', sans-serif;
+	height: 100vh;   
+    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+    margin: 0px;  /*removes default style*/
+    display: flex;  /*enables flex content for its children*/
+    box-sizing: border-box;
+    border:0px solid blue;
+}
+
+h1		{
+	font-weight: 300;
+	font-size:1.4em;	
+}
+
+h3		{
+	font-weight: 700;
+	font-size:1em;
+	text-align: center;
+}
+
+h4	{
+	margin:0px;
+	color:#3CACEB;
+	font-size:0.9em;
+}
+
+#sidebar {
+    flex-shrink: 0; /*makes sure that content is not cut off in a smaller browser window*/
+    border:0px solid red; 
+    width:20%;
+}
+
+#main{
+	border:0px solid green;
+	overflow:scroll;
+	width:80%;
+	padding:30px;
+	background-color:#F0F1F6;
+}
+
+section	{
+	 flex-grow: 1;
+}
+
+aside		{
+	color:#c2cbcf;
+}
+
+aside#sidebar {	
+	padding-top:2%;
+	background-color: #566069;
+}
+
+aside>header		{
+	color:#c2cbcf;
+	text-align: center;
+	margin-bottom:15%;
+}
+
+aside .fa-search		{
+	color:#fff;
+	font-size:1.6em;
+}
+
+input{
+	display:block;
+	color:#929BA2;
+	background-color:#454E57;
+	font-size:0.9em;
+	width:70%;
+	margin:0 auto 3% auto;
+	border:2px solid #747E87;
+	border-radius: 20px;
+	padding:5px 0 5px 15px;
+}
+
+input#filter		{
+	display:inline;
+	width:70%;
+	margin:0 5% 3% 7%;
+}
+
+#submit		{
+	background-color:#3CACEB;
+	color:#fff;
+	text-align:center;
+	border:0px solid #3CACEB;
+	width:70%;
+}
+.divider		{
+	width:75%;
+	border:1px solid #747E87;
+	margin:60px auto;
+
+}
+
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #929BA2;
+    font-family:'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #929BA2;
+   opacity:  1;
+   font-family:'Lato', sans-serif;
+   font-style: italic;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #929BA2;
+   opacity:  1;
+   font-family:'Lato', sans-serif;
+   font-style: italic;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #929BA2;
+   font-family:'Lato', sans-serif;
+   font-style: italic;
+}
+input::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #929BA2;
+   font-family:'Lato', sans-serif;
+   font-style: italic;
+}
+input::placeholder { /* Most modern browsers support this now. */
+   color:    #929BA2;
+   font-family:'Lato', sans-serif;
+   font-style: italic;
+}
+
+/* -- Grid Styling --*/
+
+.grid-item 	{ 
+	width: 360px; 
+	/*min-height:450px;*/
+	/*border:1px solid pink;*/
+	margin-bottom:20px;
+}
+
+/* -- Articles -- */
+
+article {
+	margin-bottom:15px;
+	border:0px solid blue;
+}
+
+article .article_header	{
+	background-color: #566069;
+	padding:20px 20px;
+}
+
+article figure	{
+	margin:0px;
+}
+
+article  figure img	{
+	
+}
+
+article header h4	{
+	display:inline;
+
+}
+
+article header time	{
+	float:right;
+	color:#c2cbcf;
+}
+
+article .article_content	{
+	background-color: #fff;
+}
+
+article .article_content header {	
+	padding:20px 20px;
+	color:#A1A1A1;
+}
+
+article .article_content .article_snippet	{
+	padding:0px 20px 20px 20px;
+}
+
+/* -- Subscribed Feeds -- */
+
+.feed	{
+	border:0px solid blue;
+	width:100%;
+	margin-bottom: 15px;
+}
+
+#subscribed_feeds		{
+	border:0px solid red;
+	padding:20px 20px;
+}
+#subscribed_feeds i		{
+	display:inline;
+	font-size:1.4em;
+	position:relative;
+	top:2px;
+
+}
+
+#subscribed_feeds .feedName		{
+	display:inline;
+	padding:0px 20px;
+}
+
+#subscribed_feeds .fa-times-circle		{
+	float:right;
+	color:#ECA493;
+}
