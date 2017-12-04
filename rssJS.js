@@ -73,7 +73,8 @@ $(document).ready(function() {
               };
               buildGrid(feed);
             }
-
+						$(mediaContainer).masonry('reloadItems');
+						$(mediaContainer).masonry('layout');
           });
         }
       }
@@ -96,8 +97,6 @@ $(document).ready(function() {
 		$(newItem).find('.article_snippet').text(result.description);
 
 		$('.grid').append(newItem)
-		$(mediaContainer).masonry('reloadItems');
-		$(mediaContainer).masonry('layout');
   }
 
   function fetchRSS(feedURL, feedResults) {
