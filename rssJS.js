@@ -95,6 +95,10 @@ $(document).ready(function() {
 		}
 		$(newItem).find('.content-copy').text(result.title);
 		$(newItem).find('.article_snippet').text(result.description);
+		$(newItem).find('.grid-item').height(function(idx, height) {
+			console.log(height)
+			return height + '500';
+		})
 
 		$('.grid').append(newItem)
   }
